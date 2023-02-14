@@ -1,0 +1,22 @@
+.divTable{
+    display: table;
+    width: 1024px;
+    font-size: 13px;
+    font-family: tahoma;
+    margin-left: auto;
+    margin-right: auto;
+    direction: rtl;
+}
+.divTableRow{
+    display: table-row;
+
+}
+.divTableCell{
+    display: table-cell;
+    border: 1px solid #999999;
+    padding: 3px 10px;
+}
+.set_style_link{
+    text-decoration: none;
+    font-weight: bold;
+}
