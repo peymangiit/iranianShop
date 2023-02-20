@@ -1,3 +1,6 @@
+</section>
+                    </section>
+                </section>
 <footer class="divTable">
                     <section class="divTableRow">
                         <article class="divTableCell"> مالکیت مادی و معنوی سایت</article>
