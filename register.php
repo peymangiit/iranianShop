@@ -1,5 +1,9 @@
 <?php
 include("includes/header.php");
+//اگر کاربری لاگین کرده این صفحه را نشان نده و به صفحه اول برو
+if(isset($_SESSION['state_login']) && $_SESSION['state_login']===true){
+    echo("<script type='text/javascript'>location.replace('index.php');</script>");
+}
 ?>
 <script type="text/javascript">
     function check_empty() {
