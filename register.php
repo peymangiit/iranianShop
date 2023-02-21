@@ -12,6 +12,7 @@ if(isset($_SESSION['state_login']) && $_SESSION['state_login']===true){
         alert("وارد کردن نام کاربری الزامی است");
         else {
             let r = confirm("از صحت اطلاعات وارد شده اطمینان دارید؟");
+            //عملیات سابمیت را برای فرم با نام رجیستر انجام بده
             if(r==true){
                 document.register.submit();
             }

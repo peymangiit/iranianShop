@@ -23,9 +23,10 @@ $row = mysqli_fetch_array($result);
 
     if ($row['type'] == 0)
         $_SESSION['user_type'] = "public";
-    elseif ($row['type'] == 1)
+    elseif ($row['type'] == 1){
         $_SESSION['user_type'] = "admin";
-
+        echo("<script type='text/javascript'>location.replace('admin_products.php');</script>");
+    }
     echo ("<p style='color:green;'><b> {$row['realname']} عزیز به فروشگاه ایرانیان خوش آمدید </b></p>");
     echo ($_SESSION['user_type']);
  }
