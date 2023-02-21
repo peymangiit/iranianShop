@@ -39,6 +39,14 @@ include("includes/header.php");
                             <td ><input type="text" style="text-align: left;" id="email" name="email"></td>
                         </tr>
                         <tr>
+                            <td > نوع کاربر<span style="color:red;">*</span></td>
+                            <td ><select  id="type" name="type">
+                                    <option value="0">کاربر عادی</option>
+                                    <option value="1">مدیر</option>
+                                </select>
+                             </td>
+                        </tr>
+                        <tr>
                             <td><br><br></td>
                             <td>
                                 <input   type="button" value="ثبت نام" onclick="check_empty()">
