@@ -3,7 +3,6 @@ include("includes/header.php")
 ?>
 
 <?php
-
 if (isset($_POST['username']) && !empty($_POST['username']) && isset($_POST['password']) && !empty($_POST['password'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
@@ -17,8 +16,12 @@ if (mysqli_connect_errno())
 $query = "SELECT * FROM users WHERE username='$username' AND  password='$password'";
 $result = mysqli_query($link,$query);
 $row = mysqli_fetch_array($result);
- if ($row)
+
+ if ($row){
+    $_SESSION['state_login'] = true;
+    $_SESSION['realname'] = $row['realname'];
     echo ("<p style='color:green;'><b> {$row['realname']} عزیز به فروشگاه ایرانیان خوش آمدید </b></p>");
+ }
  else
  echo ("<p style='color:red;'><b>کلمه کاربری یا کلمه عبوری یافت نشد</b></p>");
  mysqli_close($link);

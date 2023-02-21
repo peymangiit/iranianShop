@@ -4,7 +4,7 @@ include("includes/header.php")
 <?php
 
 ?>
-<script type="text/javascript">
+<!-- <script type="text/javascript">
     function check_empty() {
         let username = document.getElementById("username").value;
         if(username=="")
@@ -16,7 +16,7 @@ include("includes/header.php")
             }
         }
     }
-</script>
+</script> -->
 <form name="login"  action="./action_login.php" method="post">
 
   <table style="width: 50%;margin-left:auto;margin-right:auto;border:0;" >
@@ -32,9 +32,9 @@ include("includes/header.php")
     <tr>
         <td><br><br></td>
             <td>
-                        <input   type="button" value="ورود" onclick="check_empty()">
+                <input   type="submit" value="ورود" >
                         &nbsp;&nbsp;&nbsp;
-                    <input type="reset" value="جدید">
+                <input type="reset" value="جدید">
             </td>
     </tr>
   </table>
