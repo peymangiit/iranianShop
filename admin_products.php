@@ -17,7 +17,7 @@ if(!(isset($_SESSION['state_login']) && $_SESSION['state_login']===true && $_SES
                         </tr>
                         <tr>
                             <td >نام کالا <span style="color:red;">*</span></td>
-                            <td ><input type="text" style="text-align: left;" id="pro_name" name="pro_name"></td>
+                            <td ><input type="text" style="text-align: right;" id="pro_name" name="pro_name"></td>
                         </tr>
                         <tr>
                             <td > موجودی کالا<span style="color:red;">*</span></td>
@@ -25,7 +25,7 @@ if(!(isset($_SESSION['state_login']) && $_SESSION['state_login']===true && $_SES
                         </tr>
                         <tr>
                             <td > قیمت کالا <span style="color:red;">*</span></td>
-                            <td ><input type="text" style="text-align: left;" id="pro_price" name="pro_price">ريال</td>
+                            <td ><input type="text" style="text-align: left;" id="pro_price" name="pro_price"> ريال </td>
                         </tr>
                         <tr>
                             <td > آپلود تصویر کالا <span style="color:red;">*</span></td>
@@ -39,7 +39,7 @@ if(!(isset($_SESSION['state_login']) && $_SESSION['state_login']===true && $_SES
                         <tr>
                             <td><br><br></td>
                             <td>
-                                <input   type="submit" value=" افزودن کالا " >
+                                <input   type="submit" id="ersal" name="ersal" value=" افزودن کالا " >
                                 &nbsp;&nbsp;&nbsp;
                                 <input type="reset" value="جدید">
                             </td>
