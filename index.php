@@ -24,14 +24,15 @@
 
       <h4><?php echo ($row['pro_name'])?></h4>
       <a href="product_detail.php?id=<?php echo($row['pro_code'])?> style=text-decoration:none;">
-        <img src="<?php echo ($row['pro_image'])?>" width="150px" height="250px" />
+        <img src="<?php echo ($row['pro_image'])?>" width="200px" height="250px" />
       </a>
       <br>
-      <p> قیمت : <?php echo($row['pro_price']) ?> &nbsp ريال </p>
-      <br>
+      <p > قیمت : <?php echo($row['pro_price']) ?> &nbsp ريال </p>
+      <p> توضیحات : <?php echo(substr($row['pro_detail'],0,12)) ?>... </p>
       <p> تعداد موجودی : <span style="color:red;"><?php echo($row['pro_qty']) ?></span></p>
-      <br>
-
+      
+      <a id="<?php echo($row['pro_code']); ?>" href="product_detail.php" style="font-weight: bold;color:green; text-decoration:none"> توضیحات تکمیلی و خرید </a>
+        
     </td> 
     
   <?php 
