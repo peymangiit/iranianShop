@@ -30,17 +30,21 @@ $q_result = mysqli_query($link,$query);
 <p> توضیحات : <?php echo($row['pro_detail']) ?> </p>
 <p> تعداد موجودی : <span style="color:red;"><?php echo($row['pro_qty']) ?></span></p>
 
-<a id="<?php echo($row['pro_code']); ?>" href="order.php" style="font-weight: bold;color:green; text-decoration:none"> ثبت و خرید </a>
+<a  href="order.php?id=<?php echo($row['pro_code'])?>" style="font-weight: bold;color:green; text-decoration:none"> ثبت سفارش و خرید پستی </a>
 
-  
+
 </td>
 
 <td><img src="<?php echo ($row['pro_image'])?>"  /></td>
     
-    </tr>
-</table>
+   
 
 <?php
     }// if end
+?>
+ </tr>
+</table>
+
+<?php
 include("includes/footer.php")
 ?>

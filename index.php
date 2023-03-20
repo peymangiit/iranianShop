@@ -31,7 +31,7 @@
       <p> توضیحات : <?php echo(substr($row['pro_detail'],0,12)) ?>... </p>
       <p> تعداد موجودی : <span style="color:red;"><?php echo($row['pro_qty']) ?></span></p>
       
-      <a id="<?php echo($row['pro_code']); ?>" href="product_detail.php" style="font-weight: bold;color:green; text-decoration:none"> توضیحات تکمیلی و خرید </a>
+      <a href="product_detail.php?id=<?php echo($row['pro_code'])?>" style="font-weight: bold;color:green; text-decoration:none"> توضیحات تکمیلی و خرید </a>
         
     </td> 
     
