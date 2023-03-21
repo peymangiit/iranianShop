@@ -85,7 +85,7 @@ $q_result = mysqli_query($link,$query);
 
                 <tr>
                     <td > نام خریدار <span style="color:red;">*</span></td>
-                    <td ><input type="text" style="text-align: left;" id="buyer_name" name="buyer_name"></td>
+                    <td ><input type="text" style="text-align: right;" id="buyer_name" name="buyer_name"></td>
                 </tr>
                 
                 <tr>
@@ -117,55 +117,58 @@ $q_result = mysqli_query($link,$query);
             }//end if
         ?>
 
-    </td>
+        </td>
 
 
-    <td style="width: 30%;">
-        <?php
-            $link = mysqli_connect("localhost","root","","shop_db");
-            if (mysqli_connect_errno())
-                exit("خطایی به شرح زیر رخ داده".mysqli_connect_error());
+        <td style="width: 30%;">
+            <?php
+                $link = mysqli_connect("localhost","root","","shop_db");
+                if (mysqli_connect_errno())
+                    exit("خطایی به شرح زیر رخ داده".mysqli_connect_error());
 
-            if (isset($_GET['id']))
-                $pro_code = $_GET['id'];
+                if (isset($_GET['id']))
+                    $pro_code = $_GET['id'];
 
-            $query = "SELECT * FROM products WHERE pro_code = '$pro_code'";
-            $q_result = mysqli_query($link,$query);
+                $query = "SELECT * FROM products WHERE pro_code = '$pro_code'";
+                $q_result = mysqli_query($link,$query);
 
             ?>
 
-        <table style="width: 100%;">
-            <tr>
+            <table style="width: 100%;">
+                <tr>
 
                 <?php
                     if ($row=mysqli_fetch_array($q_result)){
                 ?>
-                <td style="border-style:dotted; vertical-align:top;">
 
-                <h4><?php echo ($row['pro_name'])?></h4>
+                    <td style="border-style:dotted; vertical-align:top;">
 
-                <br>
-                <img src="<?php echo ($row['pro_image'])?>"  />
-                <p > قیمت : <?php echo($row['pro_price']) ?> &nbsp ريال </p>
-                <p> توضیحات : <?php echo($row['pro_detail']) ?> </p>
-                <p> تعداد موجودی : <span style="color:red;"><?php echo($row['pro_qty']) ?></span></p>
+                        <h4><?php echo ($row['pro_name'])?></h4>
 
-                
-                </td>
+                        <br>
+                        <img src="<?php echo ($row['pro_image'])?>"  />
+                        <p > قیمت : <?php echo($row['pro_price']) ?> &nbsp ريال </p>
+                        <p> توضیحات : <?php echo($row['pro_detail']) ?> </p>
+                        <p> تعداد موجودی : <span style="color:red;"><?php echo($row['pro_qty']) ?></span></p>
 
-   
+                    
+                    </td>
 
-        <?php
-            }// if end
-        ?>
-            </tr>
-        </table>
-     </td>
+    
+
+                <?php
+                    }// if end
+                ?>
+                </tr>
+            </table>
+        </td>
     </tr>
 </table>
                 
 
 
 <?php
+mysqli_close($link);//قطع ارتباط با پایگاه داده
+
 include("includes/footer.php")
 ?>

@@ -30,6 +30,7 @@ if (mysqli_connect_errno())
     exit("خطایی به شرح زیر رخ داده".mysqli_connect_error());
 
 $query= "INSERT INTO users(realname,username,password,email,type)VALUES('$realname','$username','$password','$email','$type')";
+
 //اگر عملیات قرار دادن اطلاعات به درستی انجام شد پیام موفق و غیر آن پیام ناموفق
 if (mysqli_query($link,$query))
     echo("<p style='color:green;'><b>".$realname." گرامی عضویت شما با نام کاربری ".$username." در فروشگاه ایرانیان با موفقیت انجام شد "."</b></p>");
@@ -40,8 +41,8 @@ mysqli_close($link);//قطع ارتباط با پایگاه داده
 
 ?>
 
-<!-- <div dir="ltr" style="text-align: left;"> -->
 <!-- برای نشان دادن اطلاعات ثبت شده روی صفحه -->
+<!-- <div dir="ltr" style="text-align: left;"> -->
 <!-- <?php
     echo ("realname: ".$realname."<br>");
     echo ("username: ".$username."<br>");
