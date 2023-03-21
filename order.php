@@ -6,7 +6,7 @@ include("includes/header.php")
 //اگر کاربری لاگین نکرده این صفحه را نشان نده و به صفحه دیگری برو
 if(!(isset($_SESSION['state_login']) && $_SESSION['state_login']===true)){
     echo("<script type='text/javascript'>
-            location.replace('notLogged.php');
+            location.replace('noLogged.php');
           </script>");
 }
 ?>
