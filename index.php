@@ -37,13 +37,13 @@
     
   <?php 
     if ($counter%3 == 0)
-        echo("<tr></tr>");
+        echo("</tr><tr>");
   }//end of while
     if ($counter%3 != 0)
       echo("</tr>");
     ?>
 
-  </tr>
+
 </table>
 
 
